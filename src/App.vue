@@ -12,10 +12,8 @@
         class="input-search"
       />
       <button class="sort" @click="sort">Sort</button>
-      <button class="sort-asc" @click="sortAsc('first_name')">Sort Asc</button>
-      <button class="sort-desc" @click="sortDesc('first_name')">
-        Sort Desc
-      </button>
+      <button class="sort-asc" @click="sortAsc('email')">Sort Asc</button>
+      <button class="sort-desc" @click="sortDesc('email')">Sort Desc</button>
     </div>
     <TableUsers
       @deleteUser="deleteUser"
@@ -49,7 +47,26 @@
     components: { FormMember, TableUsers, PopupDelete, PopupEdit, ListUserApi },
     data() {
       return {
-        users: [1],
+        users: [
+          // {
+          //   fullname: "George",
+          // },
+          // {
+          //   fullname: "Janet",
+          // },
+          // {
+          //   fullname: "Emma",
+          // },
+          // {
+          //   fullname: "Eve",
+          // },
+          // {
+          //   fullname: "Charles",
+          // },
+          // {
+          //   fullname: "Tracey",
+          // },
+        ],
         isPopupEdit: false,
         isPopup: false,
         userId: "",
@@ -114,8 +131,6 @@
             return item;
           }
         });
-
-        // Return an array with the filtered data.
         return search_array;
       },
     },
@@ -123,12 +138,20 @@
 </script>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
   #app {
+    padding: 10px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    background: #c6ffdd;
+    background: -webkit-linear-gradient(to left, #f7797d, #fbd786, #c6ffdd);
+    background: linear-gradient(to left, #f7797d, #fbd786, #c6ffdd);
   }
   .option {
     display: flex;

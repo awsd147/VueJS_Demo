@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <div>
+  <div class="list-api">
     <h2>List user API</h2>
     <div class="toolbar">
       <input
@@ -157,6 +157,24 @@
     height: 40px;
     border-radius: 10px;
     border: 1px solid #ffff;
+    transition: all 0.4s ease;
+  }
+  .sort:hover,
+  .sort-asc:hover,
+  .sort-desc:hover {
+    background: #d9a7c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #fffcdc,
+      #d9a7c7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #fffcdc,
+      #d9a7c7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    cursor: pointer;
   }
   .btn-del {
     background: #f40337;
@@ -182,5 +200,8 @@
   .image {
     width: 200px;
     height: 200px;
+  }
+  .list-api {
+    margin-top: 20px;
   }
 </style>

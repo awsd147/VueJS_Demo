@@ -144,7 +144,7 @@
 
         if (this.account.length >= 8 && this.fullname.length >= 5) {
           this.$emit("addUser", user);
-          this.account = this.fullname = this.email = "";
+          this.account = this.fullname = this.email = this.dob = this.role = "";
         }
       },
       clearValidation: function (field) {
@@ -159,7 +159,11 @@
   .form {
     max-width: 400px;
     padding: 15px 35px 45px;
-    background-color: aquamarine;
+    background: #74ebd5;
+    background: -webkit-linear-gradient(to right, #acb6e5, #74ebd5);
+    background: linear-gradient(to right, #acb6e5, #74ebd5);
+    border-radius: 10px;
+
     margin: 0 auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     text-align: left;
